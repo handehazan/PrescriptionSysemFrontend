@@ -30,6 +30,8 @@ The frontend communicates with the backend **Prescription System API**, which is
 
 🔗 **Backend Repository:** [Prescription System Backend](https://github.com/your-username/prescription-system)
 
+🔗 **Web Site:** [Prescription - Doctor Visit Web Site](https://wonderful-river-0db27400f.4.azurestaticapps.net/index.html)
+
 ---
 
 ## 📡 API Endpoints Used
@@ -120,6 +122,13 @@ The **Pharmacy Dashboard** provides an interface for pharmacists to:
 - **Confirm successful submission** before resetting the UI.
 
 ---
+## 📸 Screenshots of the frontend
+
+| Login Page | Doctor Dashboard | Pharmacy Dashboard |
+|------------|----------------|----------------|
+| ![Login](https://github.com/user-attachments/assets/0979ea52-6153-47a8-8d26-ec007e7633be) | ![Doctor](https://github.com/user-attachments/assets/ab19390a-794c-4c7c-b081-742fdb5e4969) | ![Pharmacy](https://github.com/user-attachments/assets/bccb89e3-2666-45ba-af92-fab7aa71ad5c) |
+
+
 
 ## 🚀 Installation & Setup
 
@@ -169,4 +178,6 @@ This project is licensed under the **MIT License**.
 ---
 
 🚀 **Now you're ready to use the Prescription System Frontend!** 🚀
+
+                 🚀 **THANK YOU FOR READING!** 🚀
 
