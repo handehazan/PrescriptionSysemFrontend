@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescription Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+        <div class="welcome-message">
+            <span>Welcome, Dr. <span id="doctorName"></span></span>
+        </div>
+        <div class="header">
+            <h1>PRESCRIPTION FOR PATIENT</h1>
+        </div>
+        <div class="corner-icon">
+            <img src="caduceus.png" alt="Medical Symbol" class="medical-icon">
+        </div>
+        
+        <div class="prescription-form">
+            <div class="top-section">
+                <div class="left-section">
+                    <div class="patient-info">
+                        <div class="form-group">
+                            <label for="prescriptionId">Prescription Id:</label>
+                            <input type="text" id="prescriptionId" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tcId">TC Id no:</label>
+                            <input type="text" id="tcId">
+                            <button class="search-btn" id="patient-search">SEARCH</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullname">Fullname:</label>
+                            <input type="text" id="fullname" readonly>
+                        </div>
+                    </div>
+
+                    <div class="selected-medicines-section">
+                        <h3>Selected Medicines</h3>
+                        <table id="selectedMedicinesTable">
+                            <thead>
+                                <tr>
+                                    <th>Medicine Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Selected medicines will be added here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="medicine-search">
+                    <div class="form-group">
+                        <label for="medicine">Medicine:</label>
+                        <input type="text" id="medicine">
+                        <button class="search-btn" id="medicine-search">SEARCH</button>
+                    </div>
+                    <div class="search-results">
+                        <h3>Search Results</h3>
+                        <table id="searchResultsTable">
+                            <tbody>
+                                <!-- Search results will be added here -->
+                            </tbody>
+                        </table>
+                        <div class="pagination">
+                            <button id="prevPage" disabled>&lt; Previous</button>
+                            <span id="currentPage">Page 1</span>
+                            <button id="nextPage">Next &gt;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="justify-content: flex-end; margin-top: 20px;">
+                <button id="complete-prescription" class="complete-btn">Complete Prescription</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

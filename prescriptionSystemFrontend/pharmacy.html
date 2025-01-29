@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <button class="logout-btn" onclick="logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+        <div class="header">
+            <h1>PHARMACY MANAGEMENT</h1>
+        </div>
+        <div class="corner-icon">
+            <img src="caduceus.png" alt="Medical Symbol" class="medical-icon">
+        </div>
+        <div class="prescription-form">
+            <div class="form-group">
+                <label for="pharmacy">Pharmacy:</label>
+                <input type="text" id="pharmacy" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="tcId">TC Id no:</label>
+                <input type="text" id="tcId">
+                <button class="search-btn" id="patient-search">SEARCH</button>
+            </div>
+
+            <div class="form-group">
+                <label for="fullname">Fullname:</label>
+                <input type="text" id="fullname" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="prescriptions">Prescriptions:</label>
+                <select id="prescriptions">
+                    <option value="">Select a prescription</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="prescriptionId">Prescription Id:</label>
+                <input type="text" id="prescriptionId" readonly>
+            </div>
+
+            <div class="prescription-medicines">
+                <h3>Prescription Medicines - ID: <span id="displayPrescriptionId"></span></h3>
+                <div class="medicine-list readonly">
+                    <ul id="prescriptionMedicinesList">
+                        <!-- Prescription medicines will be listed here -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="medicine-search">
+                <h3>Search Medicine</h3>
+                <div class="form-group">
+                    <label for="medicine">Medicine:</label>
+                    <input type="text" id="medicine" placeholder="Type medicine name...">
+                    <button class="search-btn" id="medicine-search">SEARCH</button>
+                    <button class="add-btn" id="add-medicine">ADD</button>
+                </div>
+                <div class="search-results">
+                    <table id="searchResultsTable">
+                        <tbody>
+                            <!-- Search results will be added here -->
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <button id="prevPage" disabled>&lt; Previous</button>
+                        <span id="currentPage">Page 1</span>
+                        <button id="nextPage">Next &gt;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-list">
+                <h3>Pricing Table</h3>
+                <table id="medicineTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Medicine entries will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="total-section">
+                <strong>Total: <span id="totalAmount">0</span> TL</strong>
+                <button id="submit-prescription" class="submit-btn">Submit Prescription</button>
+            </div>
+        </div>
+    </div>
+    <script src="pharmacy.js"></script>
+</body>
+</html> 
